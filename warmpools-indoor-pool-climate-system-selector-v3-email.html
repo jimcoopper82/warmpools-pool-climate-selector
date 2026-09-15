@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Warmpools Indoor Pool Climate System Selector</title>
+<style>
+  :root{
+    --ink:#17324d;--muted:#5f6f7f;--line:#d8e0e7;--soft:#f5f8fa;--brand:#0f6b88;--accent:#0b7e74;--warn:#8a5a00;--danger:#8a2d2d;--white:#fff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#1f2933;line-height:1.5}
+  .wrap{max-width:960px;margin:0 auto;padding:24px 16px 48px}
+  .hero{background:linear-gradient(180deg,#f3f8fb,#fff);border:1px solid var(--line);border-radius:18px;padding:28px;margin-bottom:22px}
+  h1,h2,h3{color:var(--ink);line-height:1.2;margin-top:0}
+  h1{font-size:clamp(28px,5vw,44px);margin-bottom:10px}
+  h2{font-size:26px;margin-bottom:12px}
+  h3{font-size:20px;margin-bottom:10px}
+  p{margin:0 0 14px}
+  .lead{font-size:18px;color:#31485d}
+  .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:18px 0 0}
+  .benefit{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:14px}
+  .card{border:1px solid var(--line);border-radius:18px;padding:22px;margin:18px 0;background:#fff;box-shadow:0 3px 14px rgba(18,50,77,.05)}
+  .section-title{display:flex;align-items:center;gap:10px}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;flex:0 0 auto}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  @media(max-width:720px){.grid,.grid-3{grid-template-columns:1fr}}
+  label{display:block;font-weight:700;color:#27445e;margin-bottom:6px}
+  .hint{font-size:13px;color:var(--muted);margin-top:5px}
+  input,select,textarea{width:100%;padding:12px 12px;border:1px solid #bfcbd5;border-radius:10px;font:inherit;background:#fff;color:#1f2933}
+  textarea{min-height:90px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:3px solid rgba(15,107,136,.12);border-color:var(--brand)}
+  .checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px}
+  @media(max-width:720px){.checklist{grid-template-columns:1fr}}
+  .check{display:flex;gap:9px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fbfcfd}
+  .check input{width:auto;margin-top:4px}
+  .check label{margin:0;font-weight:600;color:#30475c}
+  .radio-row{display:flex;flex-wrap:wrap;gap:8px}
+  .radio-pill{position:relative}
+  .radio-pill input{position:absolute;opacity:0;pointer-events:none}
+  .radio-pill span{display:inline-block;border:1px solid #bfcbd5;border-radius:999px;padding:9px 13px;background:#fff;cursor:pointer;font-weight:600;color:#334e68}
+  .radio-pill input:checked+span{background:#e8f4f7;border-color:var(--brand);color:#0e5870}
+  .hidden{display:none!important}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  button,.btn{appearance:none;border:0;border-radius:11px;padding:13px 18px;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+  .primary{background:var(--brand);color:#fff}
+  .secondary{background:#eaf0f4;color:#24445f}
+  .cta{background:var(--accent);color:#fff;width:100%;font-size:18px;padding:15px 18px}
+  .notice{border-left:4px solid var(--brand);background:#f1f8fa;padding:12px 14px;border-radius:8px;margin:12px 0}
+  .warning{border-left-color:#d5981b;background:#fff8e8;color:#5e470a}
+  .danger{border-left-color:#bd4b4b;background:#fff2f2;color:#6d2727}
+  .success{border-left-color:#2a8e74;background:#effaf6}
+  .result{border:2px solid #b8ccd9;border-radius:18px;padding:24px;background:#fbfdfe}
+  .result-main{font-size:28px;color:var(--ink);font-weight:800;margin-bottom:6px}
+  .match{border:1px solid var(--line);border-radius:12px;padding:13px;margin:10px 0;background:#fff}
+  .match strong{color:var(--ink)}
+  .small{font-size:13px;color:var(--muted)}
+  .footer-note{font-size:12px;color:#6b7785;margin-top:18px}
+  .privacy{font-size:13px;color:#4d5f70}
+  .required::after{content:" *";color:#b42318}
+  .top-cta{margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <h1>Indoor Pool Climate System Selector</h1>
+    <p class="lead">Find out whether your indoor pool may be suited to a Dantherm CDP, Calorex Variheat, Calorex Delta, or a bespoke professionally designed climate-control system.</p>
+    <p>This free selector is designed to help you take the right first step before expensive equipment is ordered. It considers the pool, pool hall, how the building is used, what you need the system to do, and whether this is a new installation, replacement or upgrade.</p>
+    <div class="benefits">
+      <div class="benefit"><strong>Reduce expensive mistakes</strong><br>Start with the correct type of system.</div>
+      <div class="benefit"><strong>Replacement-aware</strong><br>Considers existing equipment and why it is being changed.</div>
+      <div class="benefit"><strong>Manufacturer-led</strong><br>Uses published product guidance as a provisional screening tool.</div>
+      <div class="benefit"><strong>Clear next step</strong><br>CDP projects go to the dehumidifier calculator; larger systems move to survey and design.</div>
+    </div>
+    <div class="top-cta"><a href="#selector" class="btn primary">Start the Free System Selector</a></div>
+  </section>
+
+  <form id="selector" novalidate>
+    <section class="card">
+      <div class="section-title"><span class="num">1</span><h2>About your project</h2></div>
+      <div class="grid">
+        <div>
+          <label class="required" for="projectType">What are you looking to do?</label>
+          <select id="projectType" required>
+            <option value="">Please choose</option>
+            <option>New indoor pool</option>
+            <option>Replace an existing system</option>
+            <option>Upgrade or improve an existing system</option>
+            <option>Pool-hall refurbishment</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+        <div>
+          <label class="required" for="reason">Why are you considering a new system?</label>
+          <select id="reason" required>
+            <option value="">Please choose</option>
+            <option>New installation</option>
+            <option>Existing system has failed</option>
+            <option>Existing system is unreliable</option>
+            <option>Condensation or humidity problems</option>
+            <option>Poor air circulation</option>
+            <option>Pool hall is too cold</option>
+            <option>High running costs</option>
+            <option>System is too noisy</option>
+            <option>Parts are difficult or unavailable</option>
+            <option>Improve energy efficiency</option>
+            <option>Building or pool-hall refurbishment</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="replacementFields" class="hidden" style="margin-top:16px">
+        <div class="grid">
+          <div><label for="existingManufacturer">Existing manufacturer</label><input id="existingManufacturer" placeholder="e.g. Calorex, Dantherm, other"></div>
+          <div><label for="existingModel">Existing model</label><input id="existingModel" placeholder="Enter model if known"></div>
+          <div><label for="existingAge">Approximate age</label><input id="existingAge" placeholder="e.g. 15 years"></div>
+          <div><label for="working">Is it currently working?</label><select id="working"><option value="">Please choose</option><option>Yes</option><option>Partly / intermittently</option><option>No</option><option>Not sure</option></select></div>
+          <div><label for="replacementPreference">Replacement preference</label><select id="replacementPreference"><option value="">Please choose</option><option>Like-for-like if suitable</option><option>Happy to redesign / upgrade</option><option>Not sure - advise me</option></select></div>
+          <div><label for="existingDuctwork">Existing ductwork?</label><select id="existingDuctwork"><option value="">Please choose</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
+          <div><label for="reuseDuctwork">Reuse existing ductwork if suitable?</label><select id="reuseDuctwork"><option value="">Please choose</option><option>Yes, if it is suitable</option><option>No / planning new ductwork</option><option>Not sure - advise me</option></select></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title"><span class="num">2</span><h2>Pool details</h2></div>
+      <div class="grid-3">
+        <div><label class="required" for="poolLength">Pool length (m)</label><input id="poolLength" type="number" min="1" step="0.1" required></div>
+        <div><label class="required" for="poolWidth">Pool width (m)</label><input id="poolWidth" type="number" min="1" step="0.1" required></div>
+        <div><label for="poolDepth">Average depth (m)</label><input id="poolDepth" type="number" min="0.5" step="0.1"></div>
+        <div><label for="extraWaterArea">Extra water area (m²)</label><input id="extraWaterArea" type="number" min="0" step="0.1" placeholder="Roman end / large steps"></div>
+        <div><label class="required" for="waterTemp">Pool water temperature (°C)</label><input id="waterTemp" type="number" min="20" max="40" step="0.5" value="28" required></div>
+        <div><label class="required" for="poolUse">Pool use</label><select id="poolUse" required><option value="">Please choose</option><option value="domestic">Private domestic</option><option value="hotel">Hotel / club / light commercial</option><option value="municipal">School / municipal / public</option><option value="hydro">Hydrotherapy / high bather load</option><option value="other">Other / not sure</option></select></div>
+        <div><label for="hoursUsed">Hours used per day</label><input id="hoursUsed" type="number" min="0" max="24" step="0.5"></div>
+        <div><label for="hoursUncovered">Hours uncovered per day</label><input id="hoursUncovered" type="number" min="0" max="24" step="0.5"></div>
+        <div><label for="covered">Normally covered when not in use?</label><select id="covered"><option value="">Please choose</option><option>Yes</option><option>No</option><option>Sometimes</option><option>Not sure</option></select></div>
+      </div>
+      <h3 style="margin-top:18px">Additional water features</h3>
+      <div class="checklist">
+        <div class="check"><input type="checkbox" id="spa"><label for="spa">Spa / hot tub in the same hall</label></div>
+        <div class="check"><input type="checkbox" id="waterfall"><label for="waterfall">Waterfall or fountain</label></div>
+        <div class="check"><input type="checkbox" id="showers"><label for="showers">Poolside showers</label></div>
+        <div class="check"><input type="checkbox" id="multiPool"><label for="multiPool">More than one pool in the same hall</label></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title"><span class="num">3</span><h2>Pool hall</h2></div>
+      <div class="grid-3">
+        <div><label class="required" for="hallLength">Hall length (m)</label><input id="hallLength" type="number" min="1" step="0.1" required></div>
+        <div><label class="required" for="hallWidth">Hall width (m)</label><input id="hallWidth" type="number" min="1" step="0.1" required></div>
+        <div><label class="required" for="hallHeight">Average height (m)</label><input id="hallHeight" type="number" min="1.5" step="0.1" required></div>
+        <div><label class="required" for="airTemp">Normal / desired air temperature (°C)</label><input id="airTemp" type="number" min="18" max="40" step="0.5" value="30" required></div>
+        <div><label for="rh">Desired relative humidity (%)</label><input id="rh" type="number" min="45" max="70" step="1" value="60"></div>
+        <div><label for="glazing">External glazing</label><select id="glazing"><option>Small</option><option selected>Moderate</option><option>Large</option><option>Extensive</option><option>Not sure</option></select></div>
+        <div><label for="roofGlazing">Roof glazing?</label><select id="roofGlazing"><option>No</option><option>Yes</option><option>Not sure</option></select></div>
+        <div><label for="telescopic">Telescopic / translucent enclosure?</label><select id="telescopic"><option>No</option><option>Yes</option><option>Not sure</option></select></div>
+        <div><label for="condensation">Existing condensation problems?</label><select id="condensation"><option>No</option><option>Yes</option><option>Not sure</option></select></div>
+      </div>
+      <div style="margin-top:14px"><label for="problemNotes">Anything else we should know?</label><textarea id="problemNotes" placeholder="Optional notes about condensation, cold areas, noise, air movement or existing problems"></textarea></div>
+    </section>
+
+    <section class="card">
+      <div class="section-title"><span class="num">4</span><h2>What should the system do?</h2></div>
+      <div class="checklist">
+        <div class="check"><input type="checkbox" id="needDehum" checked><label for="needDehum">Control humidity / dehumidify</label></div>
+        <div class="check"><input type="checkbox" id="needAirHeat"><label for="needAirHeat">Heat the pool-hall air</label></div>
+        <div class="check"><input type="checkbox" id="needWaterHeat"><label for="needWaterHeat">Heat the pool water</label></div>
+        <div class="check"><input type="checkbox" id="needFreshAir"><label for="needFreshAir">Controlled fresh-air ventilation</label></div>
+        <div class="check"><input type="checkbox" id="needCooling"><label for="needCooling">Cooling / air conditioning</label></div>
+        <div class="check"><input type="checkbox" id="needAdvice"><label for="needAdvice">Not sure — I want Warmpools to advise</label></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title"><span class="num">5</span><h2>Plant room and services</h2></div>
+      <div class="grid">
+        <div><label for="plantRoom">Plant room available?</label><select id="plantRoom"><option value="">Please choose</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
+        <div><label for="lphw">Existing boiler / LPHW supply?</label><select id="lphw"><option value="">Please choose</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
+        <div><label for="asHP">Existing air source heat pump?</label><select id="asHP"><option value="">Please choose</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
+        <div><label for="phase">Electrical supply</label><select id="phase"><option value="">Please choose</option><option>Single phase</option><option>Three phase</option><option>Both available</option><option>Not sure</option></select></div>
+        <div><label for="drain">Condensate drain available?</label><select id="drain"><option value="">Please choose</option><option>Yes</option><option>No</option><option>Not sure</option></select></div>
+        <div><label for="access">Any known access restrictions?</label><select id="access"><option value="">Please choose</option><option>No</option><option>Yes</option><option>Not sure</option></select></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title"><span class="num">6</span><h2>Your details</h2></div>
+      <p class="privacy">We use these details to show your result and send a copy of the information you entered to you and Warmpools.</p>
+      <div class="grid">
+        <div><label class="required" for="name">Name</label><input id="name" required></div>
+        <div><label class="required" for="email">Email</label><input id="email" type="email" required></div>
+        <div><label class="required" for="phone">Telephone</label><input id="phone" required></div>
+        <div><label class="required" for="address">Installation address / postcode</label><input id="address" required></div>
+      </div>
+      <div class="check" style="margin-top:14px"><input type="checkbox" id="consent" required><label for="consent">I agree that Warmpools can use the information I provide to calculate my provisional result, send my confirmation and respond to this enquiry.</label></div>
+      <div class="check" style="margin-top:8px"><input type="checkbox" id="marketing"><label for="marketing">I would also like to receive occasional Warmpools updates and relevant offers. (Optional)</label></div>
+      <div class="actions"><button type="submit" class="primary">Show My Provisional System Matches</button></div>
+      <div id="formError" class="notice danger hidden" role="alert"></div>
+    </section>
+  </form>
+
+  <section id="result" class="result hidden" aria-live="polite"></section>
+</div>
+
+<script>
+const SURVEY_URL = 'https://warmpools.co.uk/shop/ols/products/warmpools-indoor-pool-climate-system-survey--design-service';
+const DEHUMIDIFIER_CALCULATOR_URL = 'https://warmpools.co.uk/dehumidifier-calculator';
+
+// EmailJS settings. Keep service/public key here, but use a dedicated template for this calculator.
+const EMAILJS_PUBLIC_KEY = 'disUs6fTSBRrMwlvv';
+const EMAILJS_SERVICE_ID = 'service_430keox';
+const EMAILJS_TEMPLATE_ID = 'template_mch1whp';
+
+const $ = id => document.getElementById(id);
+
+$('projectType').addEventListener('change', () => {
+  const v = $('projectType').value.toLowerCase();
+  const isReplacement = v.includes('replace') || v.includes('upgrade') || v.includes('refurbishment');
+  $('replacementFields').classList.toggle('hidden', !isReplacement);
+});
+
+function satPressure(t){ return 610.94 * Math.exp((17.625*t)/(t+243.04)); }
+function moistureKgPerHour(area, waterTemp, airTemp, rh, poolUse){
+  const factors = {domestic:9.5, hotel:14.0, municipal:18.0, hydro:24.0, other:16.0};
+  const e = factors[poolUse] || 16.0;
+  const RD = 461.5;
+  const T = airTemp + 273.15;
+  const pb = satPressure(waterTemp);
+  const pl = satPressure(airTemp) * (rh/100);
+  return Math.max(0, e/(RD*T) * (pb-pl) * area);
+}
+
+function value(id){ return $(id)?.value?.trim?.() ?? ''; }
+function checked(id){ return !!$(id)?.checked; }
+function n(id){ return parseFloat($(id).value) || 0; }
+
+function classify(){
+  const poolArea = n('poolLength') * n('poolWidth') + n('extraWaterArea');
+  const hallVolume = n('hallLength') * n('hallWidth') * n('hallHeight');
+  const rh = n('rh') || 60;
+  let moisture = moistureKgPerHour(poolArea, n('waterTemp'), n('airTemp'), rh, value('poolUse'));
+
+  // Circumstance uplifts used only for screening / routing, not final engineering selection.
+  let complexity = 0;
+  if (checked('spa')) complexity += 2;
+  if (checked('waterfall')) complexity += 2;
+  if (checked('showers')) complexity += 1;
+  if (checked('multiPool')) complexity += 3;
+  if (value('glazing') === 'Large') complexity += 1;
+  if (value('glazing') === 'Extensive') complexity += 2;
+  if (value('roofGlazing') === 'Yes') complexity += 1;
+  if (value('telescopic') === 'Yes') complexity += 3;
+  if (value('poolUse') === 'hydro' || value('poolUse') === 'other') complexity += 3;
+  if (checked('needFreshAir')) complexity += 1;
+  if (checked('needCooling')) complexity += 1;
+  if (checked('needWaterHeat')) complexity += 1;
+  if (value('projectType').includes('Replace') || value('projectType').includes('Upgrade')) complexity += 1;
+
+  const result = {poolArea,hallVolume,moisture,complexity,route:'',matches:[],notes:[]};
+
+  // CDP route is deliberately conservative. Final CDP model is handled by the existing dedicated calculator.
+  const simpleDomestic = value('poolUse') === 'domestic' && complexity <= 1 && !checked('needFreshAir') && !checked('needCooling') && !checked('multiPool');
+  if (simpleDomestic && poolArea <= 50 && moisture <= 2.8) {
+    result.route = 'CDP';
+    result.matches = ['Dantherm CDP wall-mounted or through-wall dehumidifier range'];
+    return result;
+  }
+
+  // Variheat published dehumidification capacities at 30C / 60% RH.
+  const variheats = [
+    {name:'Calorex Variheat S600',cap:4.6,air:2000},
+    {name:'Calorex Variheat S900',cap:6.5,air:2500},
+    {name:'Calorex Variheat S1200',cap:8.5,air:3500},
+    {name:'Calorex Variheat S1500',cap:10.5,air:4300}
+  ];
+  const requiredAir = hallVolume * 3; // screening reference only
+  const suitableV = variheats.filter(x => x.cap >= moisture && x.air >= requiredAir);
+
+  // Delta published provisional pool-area guidance by use type.
+  const bands = {
+    domestic:[['Delta 2',70,75],['Delta 4',75,85],['Delta 6',85,100],['Delta 8',100,130],['Delta 10',130,160],['Delta 12',160,180],['Delta 14',180,360],['Delta 16',360,420]],
+    hotel:[['Delta 2',60,65],['Delta 4',65,75],['Delta 6',75,90],['Delta 8',90,115],['Delta 10',115,145],['Delta 12',145,165],['Delta 14',165,330],['Delta 16',330,385]],
+    municipal:[['Delta 2',50,55],['Delta 4',55,65],['Delta 6',65,80],['Delta 8',80,100],['Delta 10',100,130],['Delta 12',130,150],['Delta 14',150,300],['Delta 16',300,350]]
+  };
+
+  const useKey = value('poolUse') === 'hotel' ? 'hotel' : value('poolUse') === 'municipal' ? 'municipal' : 'domestic';
+  const deltaMatches = (bands[useKey] || []).filter(b => poolArea >= b[1] && poolArea <= b[2]).map(b=>`Calorex ${b[0]}`);
+
+  // Complex/high-use projects or pool areas in Delta guidance go Delta/bespoke first.
+  if (deltaMatches.length || poolArea >= (useKey==='municipal'?50:useKey==='hotel'?60:70)) {
+    result.route = 'Delta';
+    result.matches = deltaMatches.length ? deltaMatches : ['Calorex Delta range — exact model requires professional design'];
+    if (complexity >= 4) result.notes.push('Your project includes factors that make the final system configuration particularly design-sensitive.');
+    return result;
+  }
+
+  if (suitableV.length) {
+    result.route = 'Variheat';
+    result.matches = suitableV.slice(0,2).map(x => x.name);
+    if (complexity >= 4) result.notes.push('Because of the project complexity, the final configuration may differ from the provisional matches shown.');
+    return result;
+  }
+
+  result.route = 'Bespoke';
+  result.matches = ['Purpose-designed indoor pool climate system'];
+  return result;
+}
+
+function replacementSummary(){
+  const pt = value('projectType');
+  if (!pt.toLowerCase().includes('replace') && !pt.toLowerCase().includes('upgrade') && !pt.toLowerCase().includes('refurbishment')) return '';
+  const parts = [];
+  if (value('existingManufacturer')) parts.push(value('existingManufacturer'));
+  if (value('existingModel')) parts.push(value('existingModel'));
+  return parts.length ? parts.join(' ') : 'Existing system details not fully known';
+}
+
+function renderResult(r){
+  const result = $('result');
+  const replacement = replacementSummary();
+  const matchHtml = r.matches.map(m=>`<div class="match"><strong>${m}</strong></div>`).join('');
+  const commonDisclaimer = `<div class="notice warning"><strong>Important:</strong> This is a provisional screening result, not a final equipment specification or quotation. Variheat, Delta and bespoke systems must be professionally surveyed and designed before equipment is ordered.</div>`;
+
+  if (r.route === 'CDP') {
+    result.innerHTML = `
+      <div class="result-main">A Dantherm CDP solution may be suitable</div>
+      <p>Your project appears suitable to continue through our dedicated indoor pool dehumidifier sizing process.</p>
+      ${matchHtml}
+      <p><strong>Next step:</strong> use the Warmpools Dehumidifier Calculator for the detailed CDP recommendation and provisional installed price.</p>
+      <a class="btn cta" href="${DEHUMIDIFIER_CALCULATOR_URL}">Continue to the Dehumidifier Calculator</a>
+      <div class="small" style="margin-top:12px">Calculated pool surface area: ${r.poolArea.toFixed(1)} m². Provisional moisture load: ${r.moisture.toFixed(1)} L/hr.</div>`;
+  } else {
+    const family = r.route === 'Variheat' ? 'Calorex Variheat' : r.route === 'Delta' ? 'Calorex Delta' : 'Bespoke system design';
+    result.innerHTML = `
+      <div class="result-main">Your provisional result: ${family}</div>
+      ${replacement ? `<p><strong>Existing / replacement system:</strong> ${replacement}</p>` : ''}
+      <p><strong>Possible system matches:</strong></p>
+      ${matchHtml}
+      ${commonDisclaimer}
+      <h3>Why professional survey and design matters</h3>
+      <p>Large indoor pool climate systems can control humidity, air temperature, pool-water heating, ventilation and air distribution. Correct equipment selection is only one part of the job. Ductwork, airflow, electrical supply, LPHW or heat-pump connections, condensate drainage, plant-room space, service access and controls all need to work together.</p>
+      <p>With equipment of this value, getting the design wrong can lead to condensation, uncomfortable conditions, poor air distribution, excessive running costs, noise, premature equipment problems or expensive alterations after installation.</p>
+      <p><strong>Warmpools can take the project from survey and design through to installation and commissioning.</strong> Our experienced engineers can assess new installations and replacements, including whether an existing system can genuinely be replaced like-for-like. Our qualified engineers have experience with specialist swimming-pool environmental systems and relevant manufacturer training.</p>
+      <div class="notice success"><strong>Peace of mind before expensive equipment is ordered:</strong> the survey and design stage confirms the actual site conditions, services, access, ductwork and final equipment configuration.</div>
+      <a class="btn cta" href="${SURVEY_URL}">Book Your Warmpools System Survey &amp; Design – £600 inc VAT</a>
+      <p class="small" style="margin-top:10px">£500 + VAT. Full survey and design fee credited against your Warmpools installation if you proceed.</p>
+      <div class="notice"><strong>Third-party installation:</strong> Warmpools’ survey and design service is based on the system being installed in accordance with the agreed design, manufacturer requirements and good engineering practice. If another installer is used, Warmpools has no control over that installer’s workmanship, commissioning or competence and cannot accept responsibility for the performance, reliability or correct operation of the completed system where installation or commissioning is carried out by others.</div>
+      <div class="small">Calculated pool surface area: ${r.poolArea.toFixed(1)} m². Pool hall volume: ${r.hallVolume.toFixed(0)} m³. Provisional moisture load: ${r.moisture.toFixed(1)} L/hr.</div>`;
+  }
+  result.classList.remove('hidden');
+  result.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function selectedText(id){
+  const el = $(id);
+  if (!el || el.selectedIndex < 0) return '';
+  return el.options[el.selectedIndex]?.text?.trim() || '';
+}
+function shown(v, fallback='Not provided'){ return v && String(v).trim() ? String(v).trim() : fallback; }
+function requirementsText(){
+  const items = [];
+  if (checked('needDehum')) items.push('Humidity control / dehumidification');
+  if (checked('needAirHeat')) items.push('Pool-hall air heating');
+  if (checked('needWaterHeat')) items.push('Pool-water heating');
+  if (checked('needFreshAir')) items.push('Controlled fresh-air ventilation');
+  if (checked('needCooling')) items.push('Cooling / air conditioning');
+  if (checked('needAdvice')) items.push('Warmpools advice on the complete system');
+  return items.length ? items.join(', ') : 'Not specified';
+}
+function resultSummary(r){
+  if (r.route === 'CDP') return 'The information entered suggests that a Dantherm CDP wall-mounted or through-wall dehumidifier may be suitable. Please continue to the dedicated Warmpools Indoor Pool Dehumidifier Calculator for detailed CDP sizing and the next step.';
+  if (r.route === 'Variheat') return 'The information entered suggests that a Calorex Variheat ducted climate-control system may be appropriate. The matches shown are provisional only; final model, configuration, ductwork, airflow, heating, ventilation, electrical and installation requirements must be confirmed by professional survey and design.';
+  if (r.route === 'Delta') return 'The information entered suggests that a Calorex Delta environmental-control system may be appropriate. Published Delta selection figures are guidance only, so final equipment selection and system design must be confirmed by professional survey and design.';
+  return 'The project appears to require a bespoke professional indoor-pool climate design. The information entered is not sufficient for a safe automatic equipment selection, so Warmpools should assess the site, services, airflow, heating, ventilation, access and installation requirements before equipment is ordered.';
+}
+function collectData(r){
+  const replacementProject = /replace|upgrade|refurbishment/i.test(value('projectType'));
+  const recommended = r.route === 'CDP' ? 'Dantherm CDP route' : r.route === 'Variheat' ? 'Calorex Variheat' : r.route === 'Delta' ? 'Calorex Delta' : 'Bespoke professional design';
+  return {
+    customer_name: shown(value('name')),
+    customer_email: shown(value('email')),
+    customer_phone: shown(value('phone')),
+    customer_address: shown(value('address')),
+
+    project_type: shown(selectedText('projectType')),
+    reason_for_change: shown(selectedText('reason')),
+    existing_manufacturer: replacementProject ? shown(value('existingManufacturer')) : 'Not applicable - new installation',
+    existing_model: replacementProject ? shown(value('existingModel')) : 'Not applicable - new installation',
+    existing_age: replacementProject ? shown(value('existingAge')) : 'Not applicable - new installation',
+    existing_working: replacementProject ? shown(selectedText('working')) : 'Not applicable - new installation',
+    replacement_preference: replacementProject ? shown(selectedText('replacementPreference')) : 'Not applicable - new installation',
+    existing_ductwork: replacementProject ? shown(selectedText('existingDuctwork')) : 'Not applicable - new installation',
+    reuse_ductwork: replacementProject ? shown(selectedText('reuseDuctwork')) : 'Not applicable - new installation',
+
+    pool_length: shown(value('poolLength')),
+    pool_width: shown(value('poolWidth')),
+    pool_depth: shown(value('poolDepth')),
+    pool_area: r.poolArea.toFixed(1),
+    water_temp: shown(value('waterTemp')),
+    pool_use_type: shown(selectedText('poolUse')),
+    hours_used: shown(value('hoursUsed')),
+    hours_uncovered: shown(value('hoursUncovered')),
+    pool_covered: shown(selectedText('covered')),
+
+    spa: checked('spa') ? 'Yes' : 'No',
+    water_feature: checked('waterfall') ? 'Yes' : 'No',
+    poolside_showers: checked('showers') ? 'Yes' : 'No',
+    multiple_pools: checked('multiPool') ? 'Yes' : 'No',
+
+    hall_length: shown(value('hallLength')),
+    hall_width: shown(value('hallWidth')),
+    hall_height: shown(value('hallHeight')),
+    hall_volume: r.hallVolume.toFixed(0),
+    air_temp: shown(value('airTemp')),
+    target_rh: shown(value('rh'), '60'),
+    glazing: shown(selectedText('glazing')),
+    roof_glazing: shown(selectedText('roofGlazing')),
+    enclosure: shown(selectedText('telescopic')),
+    condensation: shown(selectedText('condensation')),
+    condensation_notes: shown(value('problemNotes'), 'None supplied'),
+
+    system_requirements: requirementsText(),
+
+    plant_room: shown(selectedText('plantRoom')),
+    lphw: shown(selectedText('lphw')),
+    ashp: shown(selectedText('asHP')),
+    electrical_supply: shown(selectedText('phase')),
+    condensate_drain: shown(selectedText('drain')),
+    access_restrictions: shown(selectedText('access')),
+
+    recommended_system: recommended,
+    possible_models: r.matches.join(' / '),
+    result_summary: resultSummary(r),
+
+    provisional_moisture_load: r.moisture.toFixed(1) + ' L/hr',
+    marketing_consent: checked('marketing') ? 'Yes' : 'No'
+  };
+}
+
+function sendEmail(data){
+  if (EMAILJS_TEMPLATE_ID === 'YOUR_CLIMATE_TEMPLATE_ID') return;
+  if (!window.emailjs) return;
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data).catch(err=>console.error('Warmpools EmailJS send failed:', err));
+}
+
+$('selector').addEventListener('submit', e => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    $('formError').textContent = 'Please complete all required fields before viewing your result.';
+    $('formError').classList.remove('hidden');
+    return;
+  }
+  $('formError').classList.add('hidden');
+  const r = classify();
+  renderResult(r);
+  sendEmail(collectData(r));
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</body>
+</html>
